@@ -13,6 +13,9 @@
 		569C9C6E19D53279009E2C53 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 569C9C6D19D53279009E2C53 /* Images.xcassets */; };
 		569C9C7119D53279009E2C53 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 569C9C6F19D53279009E2C53 /* LaunchScreen.xib */; };
 		569C9C7D19D53279009E2C53 /* TriviaAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569C9C7C19D53279009E2C53 /* TriviaAppTests.swift */; };
+		569C9C8719D5375A009E2C53 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 569C9C8619D5375A009E2C53 /* Social.framework */; };
+		569C9C8919D539B5009E2C53 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569C9C8819D539B5009E2C53 /* Colors.swift */; };
+		569C9C8B19D53CDA009E2C53 /* FunFact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569C9C8A19D53CDA009E2C53 /* FunFact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		569C9C7619D53279009E2C53 /* TriviaAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TriviaAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		569C9C7B19D53279009E2C53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		569C9C7C19D53279009E2C53 /* TriviaAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaAppTests.swift; sourceTree = "<group>"; };
+		569C9C8619D5375A009E2C53 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		569C9C8819D539B5009E2C53 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		569C9C8A19D53CDA009E2C53 /* FunFact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunFact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				569C9C8719D5375A009E2C53 /* Social.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +66,7 @@
 		569C9C5819D53279009E2C53 = {
 			isa = PBXGroup;
 			children = (
+				569C9C8619D5375A009E2C53 /* Social.framework */,
 				569C9C6319D53279009E2C53 /* TriviaApp */,
 				569C9C7919D53279009E2C53 /* TriviaAppTests */,
 				569C9C6219D53279009E2C53 /* Products */,
@@ -83,6 +91,8 @@
 				569C9C6D19D53279009E2C53 /* Images.xcassets */,
 				569C9C6F19D53279009E2C53 /* LaunchScreen.xib */,
 				569C9C6419D53279009E2C53 /* Supporting Files */,
+				569C9C8819D539B5009E2C53 /* Colors.swift */,
+				569C9C8A19D53CDA009E2C53 /* FunFact.swift */,
 			);
 			path = TriviaApp;
 			sourceTree = "<group>";
@@ -161,6 +171,7 @@
 				TargetAttributes = {
 					569C9C6019D53279009E2C53 = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = 2ZSEKXAT7V;
 					};
 					569C9C7519D53279009E2C53 = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -213,7 +224,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				569C9C6919D53279009E2C53 /* ViewController.swift in Sources */,
+				569C9C8919D539B5009E2C53 /* Colors.swift in Sources */,
 				569C9C6719D53279009E2C53 /* AppDelegate.swift in Sources */,
+				569C9C8B19D53CDA009E2C53 /* FunFact.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,7 +349,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TriviaApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -346,7 +361,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TriviaApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

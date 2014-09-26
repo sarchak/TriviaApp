@@ -1,25 +1,95 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="TriviaApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Thanks you for choosing TriviaApp.. A new fact will appear soon..." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kW3-Hv-IAh">
+                                <rect key="frame" x="40" y="92" width="240" height="215"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MMT-8j-aLd">
+                                <rect key="frame" x="52" y="438" width="228" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <color key="tintColor" red="0.018483837882493987" green="0.02558992346938771" blue="0.01745645132167661" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Show Another Fact">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="factButton" destination="vXZ-lx-hvc" eventType="touchUpInside" id="42N-Ru-HKS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you know?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hmo-NO-dpD">
+                                <rect key="frame" x="95" y="52" width="130" height="21"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RUu-Ti-mh6">
+                                <rect key="frame" x="125" y="361" width="70" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <state key="normal" title="Tweet">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tweetButton" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qsD-Eb-Sme"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="0Sa-0M-ZBD">
+                                <rect key="frame" x="150" y="120" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.5060688126567261" green="0.78624038861515133" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Hmo-NO-dpD" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="79" id="04G-Hm-t7g"/>
+                            <constraint firstItem="MMT-8j-aLd" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="36" id="2Y4-dM-oGC"/>
+                            <constraint firstItem="RUu-Ti-mh6" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="109" id="8Oi-84-d3C"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MMT-8j-aLd" secondAttribute="trailing" constant="24" id="8qZ-Y4-4iS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RUu-Ti-mh6" secondAttribute="trailing" constant="109" id="9qQ-DZ-r4U"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="RUu-Ti-mh6" secondAttribute="bottom" constant="177" id="AWb-9I-oYl"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="MMT-8j-aLd" secondAttribute="bottom" constant="90" id="BHj-aF-fGl"/>
+                            <constraint firstItem="kW3-Hv-IAh" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="72" id="GDS-7Q-MaB"/>
+                            <constraint firstItem="Hmo-NO-dpD" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="32" id="IlZ-O7-qI8"/>
+                            <constraint firstItem="kW3-Hv-IAh" firstAttribute="top" secondItem="Hmo-NO-dpD" secondAttribute="bottom" constant="19" id="MCx-8n-Zz9"/>
+                            <constraint firstItem="kW3-Hv-IAh" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="24" id="RkC-vL-6ec"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Hmo-NO-dpD" secondAttribute="trailing" constant="79" id="esC-PK-HTr"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="kW3-Hv-IAh" secondAttribute="bottom" constant="261" id="kf9-Di-juA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kW3-Hv-IAh" secondAttribute="trailing" constant="24" id="m6r-Qh-m7L"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="0Sa-0M-ZBD" id="51g-HP-4e1"/>
+                        <outlet property="factButtonText" destination="MMT-8j-aLd" id="VRi-vC-d34"/>
+                        <outlet property="factText" destination="kW3-Hv-IAh" id="SCu-AY-CY6"/>
+                        <outlet property="tweetButtonLabel" destination="RUu-Ti-mh6" id="nSK-3T-LdG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="74" y="128"/>
         </scene>
     </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>
