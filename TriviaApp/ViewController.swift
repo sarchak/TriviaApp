@@ -57,6 +57,7 @@ class ViewController: UIViewController {
         })
         downloadTask.resume()
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -69,7 +70,13 @@ class ViewController: UIViewController {
             tweetSheet.setInitialText(factText.text + " #TriviaApp")
             self.presentViewController(tweetSheet, animated: true, completion: nil)
         } else {
-            print ("No twitter account")
+            let alertViewController = UIAlertController(title: "Oops", message: "No Twitter Account connected on the device. Go to Settings > Twitter and add a twitter account", preferredStyle: .Alert)
+            let okButton = UIAlertAction(title: "OK", style: .Default, handler: nil)
+            let cancelButton = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+            alertViewController.addAction(okButton)
+            alertViewController.addAction(cancelButton)
+            self.presentViewController(alertViewController, animated: true, completion: nil)
+            
         }
     }
    
