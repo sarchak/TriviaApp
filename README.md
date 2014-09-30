@@ -11,4 +11,4 @@ A Trivia App built using Swift for IOS7 and IOS8
    * Tweet Functionality
    * Run in Simulator
 
-[Checkout the blog for more information](http://shrikar.com/blog/2014/09/30/how-to-build-a-trivia-app-using-swift-programming-language/)
+[Read more about the project here](http://shrikar.com/blog/2014/09/30/how-to-build-a-trivia-app-using-swift-programming-language/)
